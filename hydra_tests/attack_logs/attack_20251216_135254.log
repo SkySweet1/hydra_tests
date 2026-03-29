@@ -1,0 +1,14 @@
+Attack started: Tue Dec 16 13:52:54 MSK 2025
+Target: 
+Wordlist: 
+
+HTTP Basic Auth Brute Force
+============================
+Target: http://localhost:8080/
+Username: admin
+Wordlist: passwords.txt
+
+Error: Server not responding
+
+Attack finished: Tue Dec 16 13:52:54 MSK 2025
+Log saved: attack_logs/attack_20251216_135254.log
